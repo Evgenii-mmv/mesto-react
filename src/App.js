@@ -9,6 +9,11 @@ import './index';
 
 
 function App() {
+  const[isAddPlacePopupOpen,setIsAddPlacePopupOpen] = useState(false);
+  const[isEditProfilePopupOpen,setIsEditProfilePopupOpen] = useState(false);
+  const[isEditAvatarPopupOpen,setIsEditAvatarPopupOpen] = useState(false);
+  const[selectedCard, setSelectedCard] = useState();
+
   function handleEditAvatarClick(){
     setIsEditAvatarPopupOpen(true);
   }
@@ -22,17 +27,12 @@ function App() {
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
-    setSelectedCard(undefined);
+    setSelectedCard();
   }
   function handleCardClick(card){
     setSelectedCard(card);
   }
 
-
-  const[isAddPlacePopupOpen,setIsAddPlacePopupOpen] = useState(false);
-  const[isEditProfilePopupOpen,setIsEditProfilePopupOpen] = useState(false);
-  const[isEditAvatarPopupOpen,setIsEditAvatarPopupOpen] = useState(false);
-  const[selectedCard, setSelectedCard] = useState();
 
   return (
   <div className="page">
