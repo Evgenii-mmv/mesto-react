@@ -1,0 +1,40 @@
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "image"
+    "information"
+    "addButton";
+  min-width: 282px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-top: 42px;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+@media screen and (min-width: 600px) {
+  .profile {
+    max-width: 880px;
+    padding-top: 40px;
+    padding-bottom: 45px;
+    grid-template-columns: 120px 336px 100px;
+    grid-template-areas:
+      "image information addButton";
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .profile {
+    padding-left: 0;
+    padding-right: 0;
+    column-gap: 30px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .profile {
+    grid-template-columns: 120px 336px 1fr;
+  }
+}
