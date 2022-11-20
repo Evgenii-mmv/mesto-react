@@ -1,0 +1,12 @@
+.card__image {
+  width: 282px;
+  min-height: 282px;
+  background-size: cover;
+  border-radius: 10px 10px 0px 0px;
+  border-color: #ffffff;
+  background-color: #000000;
+}
+
+.card__image:hover {
+  cursor: pointer;
+}
