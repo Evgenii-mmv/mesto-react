@@ -1,5 +1,14 @@
 
+
 function PopupWithForm(props) {
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    props.onSubmit().then(() => {
+      props.closePopup();
+    })
+  }
+
   return (
     <section className={`pop-up pop-up_theme_${props.name} ${props.isOpen ? 'pop-up_opened' : ''}`}>
       <div className="pop-up__container">
@@ -9,6 +18,7 @@ function PopupWithForm(props) {
           className={`pop-up__form pop-up__form_type_${props.name}`}
           action="formAvatar"
           name={props.name}
+          onSubmit={onSubmit}
         >
           {props.children}
 

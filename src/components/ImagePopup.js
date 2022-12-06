@@ -1,3 +1,4 @@
+
 function ImagePopup({card, onClose}) {
   return (
     <section className={`pop-up pop-up_theme_image ${card ? 'pop-up_opened' : ""}`}>

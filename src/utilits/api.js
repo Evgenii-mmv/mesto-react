@@ -80,6 +80,14 @@ class Api {
                 return this._getResponseData(res);
             })
     }
+
+    changeLikeCardStatus(cardId, isLiked) {
+        if (isLiked) {
+            return this.deleteLike(cardId)
+        }
+        return this.putLike(cardId);
+    }
+
     //анлайк(8)
     deleteLike(cardId) {
         return fetch(this.baseUrl + '/cards/' + cardId + '/likes/', {
