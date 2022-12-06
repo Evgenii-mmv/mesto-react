@@ -14,6 +14,7 @@ function EditAvatarPopup(props) {
       closePopup={props.onClose}
       isOpen={props.isOpen}
       onSubmit={handleSubmit}
+      buttonTitle="Сохранить"
     >
       <input ref={avatarRef} id="avatar-input" className="pop-up__input pop-up__input_image" type="url" name="link"
         placeholder="Ссылка на аватар" required />

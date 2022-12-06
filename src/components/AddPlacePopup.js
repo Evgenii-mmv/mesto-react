@@ -2,10 +2,13 @@ import React from 'react';
 import PopupWithForm from './PopupWithForm';
 
 function AddPlacePopup(props) {
-  // const [title, setTitle] = React.useState("");
-  // const [link, setLink] = React.useState("");
   const cardLinkRef = React.useRef();
   const cardSubtitleRef = React.useRef();
+
+  React.useEffect(() => {
+    cardLinkRef.current.value = ""
+    cardSubtitleRef.current.value = ""
+  }, [props.isOpen]);
 
 
   function handleSubmit() {
@@ -20,6 +23,7 @@ function AddPlacePopup(props) {
       closePopup={props.onClose}
       isOpen={props.isOpen}
       onSubmit={handleSubmit}
+      buttonTitle="Создать"
     >
       <input ref={cardSubtitleRef} type="text" name="placeName" id="placeNameInput" className="pop-up__input pop-up__input_title"
         placeholder="Название" required minLength="2" maxLength="30" />
