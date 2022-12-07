@@ -1,9 +1,9 @@
 class Api {
-  constructor({ baseUrl, headers }) {
-      this.baseUrl = baseUrl;
-      this.headers = headers;
-  }
-  //вывод даты
+    constructor({ baseUrl, headers }) {
+        this.baseUrl = baseUrl;
+        this.headers = headers;
+    }
+    //вывод даты
     _getResponseData(res) {
         if (!res.ok) {
             return Promise.reject(`Ошибка: ${res.status}`);
@@ -113,7 +113,7 @@ class Api {
     }
 }
 
-const api = new Api ({
+const api = new Api({
     baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-52',
     headers: {
         authorization: '52388433-afce-471a-9922-beec3eda8533',

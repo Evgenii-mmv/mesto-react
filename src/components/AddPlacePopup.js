@@ -10,7 +10,6 @@ function AddPlacePopup(props) {
     cardSubtitleRef.current.value = ""
   }, [props.isOpen]);
 
-
   function handleSubmit() {
     return props.onAddPlace(
       cardSubtitleRef.current.value,
@@ -33,7 +32,6 @@ function AddPlacePopup(props) {
       <span className="error" id="imageSourceInput-error"></span>
     </PopupWithForm>
   )
-
 }
 
 export default AddPlacePopup;

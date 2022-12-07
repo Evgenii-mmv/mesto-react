@@ -63,18 +63,22 @@ function App() {
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
   }
+
   function handleEditProfileClick() {
     setIsEditProfilePopupOpen(true);
   }
+
   function handleAddPlaceClick() {
     setIsAddPlacePopupOpen(true);
   }
+
   function closeAllPopups() {
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
     setSelectedCard();
   }
+
   function handleCardClick(card) {
     setSelectedCard(card);
   }
@@ -84,6 +88,7 @@ function App() {
       setCurrentUser(newUser);
     }).catch(e => console.error(e));
   }
+
   function handleUpdateAvatar(avatar) {
     return api.setNewAvatar(avatar).then(newUser => {
       setCurrentUser(newUser);
